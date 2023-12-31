@@ -60,6 +60,13 @@
     font-weight: 600;
 }
 
+.current-conditions{
+    padding: 15px;
+    color: whitesmoke;
+    font-family: 'Recursive', sans-serif;
+    font-size: 16px;
+}
+
 .button{
     width: 35px;
     height: 35px;

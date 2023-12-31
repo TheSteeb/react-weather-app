@@ -8,18 +8,26 @@ const refresh = () => {
   }
 
 function WeatherCard({data}){
-
+    console.log(data);
+    //adjust background color based on Temprature
     let tempColor = data.main.temp > 20.0 ? 'red' :  
                     data.main.temp > 15 ? 'green' :
                     'blue';
+    let imgSrc = "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png"
      
     return (
         <div className="main" style={{backgroundColor: tempColor}}>
             <p className="header">{data.name}</p>
             <Button className="button" inverted color={tempColor}circular icon='refresh' onClick={refresh} />
+
             <div className="flex">
             <p className="day">Day: {moment().format('dddd')}</p>
             <p className="day">{moment().format('LL')}</p>
+            </div>
+
+            <div className='flex'>
+                <p className='current-conditions'>Current Conditions: {data.weather[0].main}</p>
+                <img src={imgSrc} alt={data.weather[0].description}></img>
             </div>
 
             <div className="flex">
