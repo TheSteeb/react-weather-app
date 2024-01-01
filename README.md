@@ -4,6 +4,10 @@ Utilizing [OpenWeather's](https://openweathermap.org/) and the clients current g
 
 ![demoImage](reactWeatherApp.png)
 
+## TODO
+* Allow searching for location
+* Remove Geolocation service requirement
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
