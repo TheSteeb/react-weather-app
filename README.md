@@ -1,4 +1,4 @@
-# Simple Reach Weather App
+# Simple React Weather App
 
 Utilizing [OpenWeather's](https://openweathermap.org/) and the clients current geolocation (currently requires location services), the app will render the current weather conditions for today.
 
