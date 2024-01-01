@@ -1,3 +1,9 @@
+# Simple Reach Weather App
+
+Utilizing [OpenWeather's](https://openweathermap.org/) and the clients current geolocation (currently requires location services), the app will render the current weather conditions for today.
+
+![demoImage](reactWeatherApp.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

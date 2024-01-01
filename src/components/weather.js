@@ -13,6 +13,8 @@ function WeatherCard({data}){
     let tempColor = data.main.temp > 20.0 ? 'red' :  
                     data.main.temp > 15 ? 'green' :
                     'blue';
+    
+    //get the icon URL for the current weather condition
     let imgSrc = "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png"
      
     return (

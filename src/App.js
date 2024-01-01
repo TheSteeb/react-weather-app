@@ -10,10 +10,15 @@ function App() {
   const [weatherData, setWeatherData] = useState({})
 
   useEffect(() => {
+
+    //get the geolcation 
+    //TODO: make it so that you can search a location or this
     navigator.geolocation.getCurrentPosition(function(position) {
       setLat(position.coords.latitude);
       setLong(position.coords.longitude);
     });
+
+    //getting the weather data 
     const fetchData = async () => {
         await fetch(`${process.env.REACT_APP_API_URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`)
         .then(res => res.json())
@@ -21,6 +26,7 @@ function App() {
           setWeatherData(result);
         });  
     }
+    // Only get the data if we have the geolocation
     if (lat && long) {
       fetchData()
     }
